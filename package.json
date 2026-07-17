@@ -6,8 +6,12 @@
   "author": "dev@wavezync.com",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "nest build",
+    "prepare": "npm run build",
     "format": "prettier --write \"lib/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",

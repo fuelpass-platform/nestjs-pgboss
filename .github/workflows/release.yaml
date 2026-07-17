@@ -1,9 +1,10 @@
 name: Publish to NPM
 
+# fuelpass-platform fork: this package is consumed as a git dependency and is
+# never published to npm. Manual trigger only, to avoid accidental publish
+# attempts under the upstream @wavezync scope when tags are pushed.
 on:
-  push:
-    tags:
-      - "v*.*.*"
+  workflow_dispatch:
 
 permissions:
   id-token: write
